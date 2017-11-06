@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2></h2>
+<!-- Page Content -->
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="list-group">
+                <ul>
+                    <li>@Html.ActionLink("Project", "Index", "Project", new { area = "" }, new { @class = "list-group-item active" })</li>
+                    <li>@Html.ActionLink("Camera", "Index", "Camera", new { area = "" }, new { @class = "list-group-item" })</li>
+                    <li>@Html.ActionLink("Login Logs", "Index", "LoginLogs", new { area = "" }, new { @class = "list-group-item" })</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class='imagescontainer'>
+                <p class='imagelabel'>Camera 1</p>
+                <img src="~/Content/IMAG0380.jpg" class='images' />
+            </div>
+            <div class='imagescontainer'>
+                <p class='imagelabel'>Camera 1</p>
+                <img src="~/Content/IMAG0380.jpg" class='images' />
+
+            </div>
+            <div class='imagescontainer'>
+                <p class='imagelabel'>Camera 1</p>
+                <img src="~/Content/IMAG0380.jpg" class='images' />
+
+            </div>
+            <div class='imagescontainer'>
+                <p class='imagelabel'>Camera 1</p>
+                <img src="~/Content/IMAG0380.jpg" class='images' />
+            </div>
+        </div>
+        <div id="cleared"></div>
+    </div>
+@*<div id="#homecontent">
+
+
+    </div>*@
+
+

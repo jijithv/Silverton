@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Silverton.Models.CameraViewModels>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.To)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LiveView)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtrernalLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VideoSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContinuousLoop)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.From)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.To)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiveView)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtrernalLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VideoSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContinuousLoop)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CameraId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CameraId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CameraId })
+        </td>
+    </tr>
+}
+
+</table>
